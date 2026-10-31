@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Basic Theory of Driving — Reading Edition</title>
-<meta name="description" content="A native reading edition of the Singapore Basic Theory of Driving handbook, with a companion visual study guide.">
+<title>Basic Theory of Driving — My Study Copy</title>
+<meta name="description" content="My personal, unofficial reading copy of the Singapore Basic Theory of Driving handbook, with a companion visual study guide.">
 <style>
   :root {
     --ink: #191714;
@@ -47,7 +47,7 @@
     padding: 8px 0 26px; border-bottom: 1px solid var(--line);
   }
   .mark { display: flex; align-items: center; gap: 11px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
-  .mark svg { width: 28px; height: 28px; }
+  .monogram { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--ink); font-family: var(--serif); font-size: 10px; letter-spacing: .04em; }
   .topbar .edition { color: var(--muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
   .hero { display: grid; grid-template-columns: 1.16fr .84fr; gap: 54px; align-items: center; padding: 58px 0 52px; }
   .kicker { display: flex; align-items: center; gap: 10px; color: var(--red); font-size: 11px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; margin: 0 0 18px; }
@@ -76,21 +76,26 @@
   .cover {
     position: relative; aspect-ratio: 1 / 1.35; overflow: hidden; padding: 28px 26px;
     display: flex; flex-direction: column; justify-content: space-between;
-    color: #f9efdc; background: #8e2d25;
-    box-shadow: inset 9px 0 0 rgba(0,0,0,.14), 0 1px 0 rgba(255,255,255,.25) inset;
+    color: #20302c; background: #fbf5e7;
+    box-shadow: inset 9px 0 0 rgba(163,52,42,.85), 0 1px 0 rgba(255,255,255,.7) inset;
     transform: rotate(-1.6deg);
+    background-image: repeating-linear-gradient(to bottom, transparent 0 27px, rgba(33,76,59,.09) 27px 28px);
   }
-  .cover::after { content: ""; position: absolute; inset: 13px; border: 1px solid rgba(249,239,220,.55); pointer-events: none; }
+  .cover::after { content: ""; position: absolute; inset: 13px; border: 1px solid rgba(32,48,44,.3); pointer-events: none; }
   .cover-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; position: relative; z-index: 1; }
-  .cover-top span { font-size: 8px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; opacity: .9; }
-  .crest { width: 40px; height: 40px; opacity: .95; }
+  .cover-top span { font-size: 8px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #6b6258; }
   .cover-title { position: relative; z-index: 1; margin-top: 30px; }
-  .cover-title .small { font-size: 8px; letter-spacing: .22em; text-transform: uppercase; opacity: .82; }
+  .cover-title .small { font-size: 8px; letter-spacing: .22em; text-transform: uppercase; color: #6b6258; }
   .cover-title h2 { margin: 10px 0 0; font-family: var(--serif); font-weight: 400; font-size: 38px; line-height: .93; letter-spacing: -.04em; }
-  .cover-title h2 span { display: block; color: #e9c989; font-style: italic; font-size: 44px; }
+  .cover-title h2 span { display: block; color: var(--red); font-style: italic; font-size: 44px; }
+  .cover-stamp {
+    position: absolute; z-index: 2; right: 22px; top: 48%; transform: rotate(-8deg);
+    padding: 5px 9px; border: 1.5px solid rgba(163,52,42,.6); color: var(--red);
+    font-size: 9px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; opacity: .8;
+  }
   .cover-bottom { position: relative; z-index: 1; }
-  .roadline { width: 100%; height: 30px; margin-bottom: 12px; opacity: .8; }
-  .cover-bottom p { margin: 0; font-size: 7.5px; letter-spacing: .16em; line-height: 1.9; text-transform: uppercase; opacity: .9; }
+  .roadline { width: 100%; height: 30px; margin-bottom: 12px; opacity: .65; color: #214c3b; }
+  .cover-bottom p { margin: 0; color: #6b6258; font-size: 7.5px; letter-spacing: .16em; line-height: 1.9; text-transform: uppercase; }
 
   .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 6px; }
   .card {
@@ -123,56 +128,50 @@
 <div class="shell">
   <header class="topbar">
     <div class="mark">
-      <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <circle cx="16" cy="16" r="15" stroke="currentColor" stroke-width="1.2"/>
-        <path d="M16 5.5 18.4 12l6.8.3-5.3 4.2 1.8 6.6L16 19.3l-5.7 3.8 1.8-6.6-5.3-4.2 6.8-.3L16 5.5Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
-      </svg>
-      Singapore Traffic Police
+      <span class="monogram" aria-hidden="true">BTT</span>
+      My driving notes
     </div>
-    <div class="edition">Native reading edition · 2026</div>
+    <div class="edition">Personal study copy · unofficial</div>
   </header>
 
   <main>
     <section class="hero">
       <div>
-        <p class="kicker">The official handbook, reset for reading</p>
-        <h1>Basic Theory<br>of <em>Driving.</em></h1>
-        <p class="deck">Every rule, sign, marking and table from the handbook — rebuilt as real HTML and SVG, with the page structure intact and a study layer that helps the important things stay put.</p>
+        <p class="kicker">A personal reading copy, not an official publication</p>
+        <h1>Basic Theory,<br><em>made readable.</em></h1>
+        <p class="deck">I rebuilt my copy of the Singapore driving handbook as a native reading edition — every rule, sign and marking in real HTML and SVG, with the page structure intact and the things I keep forgetting marked up for revision.</p>
         <div class="actions">
           <a class="button primary" href="handbook.html">
-            Open the handbook
+            Open my handbook
             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="button secondary" href="road-sense.html">Study guide</a>
+          <a class="button secondary" href="road-sense.html">My study guide</a>
         </div>
         <div class="meta">
           <span class="pill">89 printed pages</span>
-          <span class="pill">181 road signs</span>
-          <span class="pill">114 native figures</span>
-          <span class="pill">No screenshots</span>
+          <span class="pill">My annotations</span>
+          <span class="pill">Built for revision</span>
+          <span class="pill">Unofficial</span>
         </div>
       </div>
 
       <div class="cover-wrap" aria-hidden="true">
         <div class="cover">
           <div class="cover-top">
-            <span>Singapore<br>Traffic Police</span>
-            <svg class="crest" viewBox="0 0 48 48" fill="none">
-              <path d="M24 3 40 9v12c0 10-7 18-16 23C15 39 8 31 8 21V9l16-6Z" stroke="currentColor" stroke-width="1.2"/>
-              <path d="M24 12v18M16 19h16M18.5 28h11" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-              <circle cx="24" cy="19" r="2.2" fill="currentColor"/>
-            </svg>
+            <span>Personal study copy</span>
+            <span>BTT · 2026</span>
           </div>
           <div class="cover-title">
-            <div class="small">The official handbook</div>
+            <div class="small">My reading notes</div>
             <h2>Basic Theory<span>of Driving</span></h2>
           </div>
+          <div class="cover-stamp">Unofficial</div>
           <div class="cover-bottom">
             <svg class="roadline" viewBox="0 0 300 30" fill="none" preserveAspectRatio="none">
               <path d="M0 24h300" stroke="currentColor" stroke-width="1"/>
               <path d="M12 24h20M44 24h20M76 24h20M108 24h20M140 24h20M172 24h20M204 24h20M236 24h20M268 24h20" stroke="currentColor" stroke-width="2"/>
             </svg>
-            <p>Signs · Signals · Traffic rules<br>Reading edition · MMXXVI</p>
+            <p>Signs · Signals · Traffic rules<br>My reading copy · MMXXVI</p>
           </div>
         </div>
       </div>
@@ -199,7 +198,7 @@
   </main>
 
   <footer>
-    <p>An unofficial, non-commercial reading edition. Original handbook content © Singapore Traffic Police. Always check the current official handbook and Traffic Police notices before your test.</p>
+    <p>My personal, unofficial study project. Not affiliated with, endorsed by, or published by the Singapore Traffic Police. Original handbook content © Singapore Traffic Police. Always check the current official handbook and Traffic Police notices before your test.</p>
     <p><a href="https://github.com/pwaaron/sg-basic-theory-driving">Source on GitHub</a></p>
   </footer>
 </div>
